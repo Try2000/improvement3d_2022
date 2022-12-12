@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be76d81fda45ce84bb965841fae3953f, type: 3}
+  m_Name: UnityTemplatePropertySO
+  m_EditorClassIdentifier: 
+  version: 3.6.0
+  documentURL: https://qiita.com/engineer_Intern/private/5b495194aacbf677047d
+  documentURL_android: https://qiita.com/engineer_Intern/private/c2d5073bd89b55e2cda9
+  documentURL_iOS: https://qiita.com/engineer_Intern/private/2a0cb3f3790fc593d9e8#11-other-setting
+  documentURL_facebookSDK: https://qiita.com/engineer_Intern/private/aa2c565d2a7410bbc4bb
+  IsCompleteInitialize: 0
