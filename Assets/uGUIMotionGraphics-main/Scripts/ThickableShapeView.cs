@@ -10,11 +10,11 @@ public class ThickableShapeView : MonoBehaviour {
     public Sprite SourceImage;
     private Sprite _currentSourceImage;
     // サイズ
-    public int Size = 150;
-    private int _currentSize;
+    public float Size = 150;
+    private float _currentSize;
     // 太さ
-    public int Thickness = 15;
-    private int _currentThickness;
+    public float Thickness = 15;
+    private float _currentThickness;
     // 色
     public Color Color = Color.white;
     private Color _currentColor;

@@ -15,6 +15,11 @@ public class RoundTextMover : MonoBehaviour
     TextProOnACircle  textProOnACircle;
     private void Awake()
     {
+        
+    }
+    public void MoveRoundText()
+    {
+        gameObject.SetActive(true);
         textProOnACircle = GetComponent<TextProOnACircle>();
         textProOnACircle.m_arcDegrees = fromAngle;
         textProOnACircle.m_angularOffset = fromAngularOffset;

@@ -2,18 +2,28 @@ using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[System.Serializable]
+public class ThickCircleAnimationData
+{
+    public float toSize = 10;
+    public float toThick = 10;
+    public float duration = 0.4f;
+    public Ease easingType = Ease.OutQuad;
+}
 public class ThickCircleAnimator : MonoBehaviour
 {
     [SerializeField] ThickableShapeView thickableShape;
-    [SerializeField] int toSize = 10;
-    [SerializeField] int toThick = 10;
-    [SerializeField] float duration = 0.4f;
-    [SerializeField] Ease easingType = Ease.OutQuad;
- 
+    ThickCircleAnimationData thickCircleAnimationData = null;
+    public ThickCircleAnimationData ThickCircleAnimationData
+    {
+        set { thickCircleAnimationData = value; }
+    }
+
     public void AnimateCircle()
     {
-        DOTween.To(() => thickableShape.Size, (x) => thickableShape.Size = x, toSize, duration).SetEase(easingType);
-        DOTween.To(() => thickableShape.Thickness, (x) => thickableShape.Thickness = x, toThick, duration).SetEase(easingType);
+        if (thickCircleAnimationData == null) return;
+        gameObject.SetActive(true);
+        DOTween.To(() => thickableShape.Size, (x) => thickableShape.Size = x, thickCircleAnimationData.toSize, thickCircleAnimationData.duration).SetEase(thickCircleAnimationData.easingType);
+        DOTween.To(() => thickableShape.Thickness, (x) => thickableShape.Thickness = x, thickCircleAnimationData.toThick, thickCircleAnimationData.duration).SetEase(thickCircleAnimationData.easingType);
     }
 }
