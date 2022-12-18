@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,7 @@ public class ThickCircleAnimator : MonoBehaviour
 {
     [SerializeField] ThickableShapeView thickableShape;
     ThickCircleAnimationData thickCircleAnimationData = null;
+    public event Action onAnimate;
     public ThickCircleAnimationData ThickCircleAnimationData
     {
         set { thickCircleAnimationData = value; }
@@ -23,6 +25,7 @@ public class ThickCircleAnimator : MonoBehaviour
     {
         if (thickCircleAnimationData == null) return;
         gameObject.SetActive(true);
+        if (onAnimate != null) onAnimate();
         DOTween.To(() => thickableShape.Size, (x) => thickableShape.Size = x, thickCircleAnimationData.toSize, thickCircleAnimationData.duration).SetEase(thickCircleAnimationData.easingType);
         DOTween.To(() => thickableShape.Thickness, (x) => thickableShape.Thickness = x, thickCircleAnimationData.toThick, thickCircleAnimationData.duration).SetEase(thickCircleAnimationData.easingType);
     }

@@ -40,13 +40,13 @@ public class ObjectGenerator_0 : MonoBehaviour
                 
                 for (int ix = 0; ix < objectGenerator_0.num.x; ix++)
                 {
-                    for (int iy = 0; iy < objectGenerator_0.num.y; iy++)
+                    for (int iz = 0; iz < objectGenerator_0.num.z; iz++)
                     {
-                        for (int iz = 0; iz < objectGenerator_0.num.z; iz++)
+                        for (int iy = 0; iy < objectGenerator_0.num.y; iy++)
                         {
                             GameObject obj = PrefabUtility.InstantiatePrefab(objectGenerator_0.prefab) as GameObject;
                             obj.transform.SetParent(objectGenerator_0.parentTransform);
-                            obj.transform.position = GetPosition(objectGenerator_0, new Vector3Int(ix,iy,iz));
+                            obj.transform.position = GetPosition(objectGenerator_0, new Vector3Int(ix, iy, iz));
                             Undo.RegisterCreatedObjectUndo(obj, "Create New GameObject");
                         }
                     }

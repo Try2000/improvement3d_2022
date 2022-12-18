@@ -96,7 +96,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da144bcebe3fd2548bf7c21ab5dcaf59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveAmount: {x: 8, y: 0, z: 0}
-  duration: 1
-  easingType: 4
-  randomDurationMax: 4
+  defaultMoveData:
+    moveAmount: {x: 11, y: 0, z: 0}
+    duration: 0.5
+    easingType: 1
+    delay: 0
+    isRelative: 1
+  randomDurationMax: 6
+  isAutoStart: 1

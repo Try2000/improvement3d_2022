@@ -4,16 +4,27 @@ using UnityEngine;
 using DG.Tweening;
 public class LoopMover : MonoBehaviour
 {
-    [SerializeField] Vector3 moveAmount;
-    [SerializeField] float duration = 1;
-    [SerializeField] Ease easingType = Ease.OutQuad;
+    [SerializeField] MoveData defaultMoveData;
     [SerializeField] float randomDurationMax = 1;
+    [SerializeField] bool isAutoStart = false;
+    MoveData moveData;
+    public MoveData MoveData
+    {
+        set { moveData = value; }
+    }
+    Transform _transform;
 
     private void Awake()
     {
-        Transform _transform = transform;
+        _transform = transform;
+        moveData = defaultMoveData;
+        if (isAutoStart) StartMove();
+    }
+
+    public void StartMove()
+    {
         float randomVal = UnityEngine.Random.Range(0, randomDurationMax);
-        Sequence sequence = DOTween.Sequence().Append(_transform.DOMove(moveAmount, duration + randomVal).SetEase(easingType).SetRelative())
-                                              .Append(_transform.DOMove(-moveAmount, duration + randomVal).SetEase(easingType).SetRelative()).SetLoops(-1).SetLink(gameObject);
+        Sequence sequence = DOTween.Sequence().Append(_transform.DOMove(moveData.moveAmount, moveData.duration + randomVal).SetEase(moveData.easingType).SetRelative())
+                                             .Append(_transform.DOMove(-moveData.moveAmount, moveData.duration + randomVal).SetEase(moveData.easingType).SetRelative()).SetLoops(-1).SetLink(gameObject);
     }
 }
