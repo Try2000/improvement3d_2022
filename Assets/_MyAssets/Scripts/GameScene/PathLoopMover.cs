@@ -8,6 +8,7 @@ public class PathLoopMover : MonoBehaviour
     [SerializeField] int initialIndex;
     [SerializeField] MoveData moveData;
     Transform _transform;
+    
 
     private void Awake()
     {
