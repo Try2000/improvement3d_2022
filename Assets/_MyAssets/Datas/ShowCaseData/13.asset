@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e9d28721b08674ba65139985104126, type: 3}
+  m_Name: 13
+  m_EditorClassIdentifier: 
+  showCaseData:
+    artistPicture: {fileID: 21300000, guid: cdee5360802f1614caf6c92ae538d517, type: 3}
+    showcaseName: "\u3068\u308B\u3061\u3083\u3093"
+    names:
+    - "\u96E8\u97F3"
+    - "\u307D\u3081\u3061\u3083\u3093"
+    - "\u307F\u3064\u307C\u3057"
+    - "\u30DE\u30EA\u30FC\u30B4\u30FC\u30EB\u30C9"
+    - "\u308A\u3063\u3074\u30FC"
+    - "\u3066\u3093\u3066\u3093"
+    - "\u4E0B\u5317"
+    genre: 1

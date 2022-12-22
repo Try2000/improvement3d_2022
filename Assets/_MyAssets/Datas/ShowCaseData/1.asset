@@ -13,11 +13,22 @@ MonoBehaviour:
   m_Name: 1
   m_EditorClassIdentifier: 
   showCaseData:
-    artistPicture: {fileID: 0}
-    showcaseName: 
+    artistPicture: {fileID: 21300000, guid: 60dac0c1884aaf1478afe31d0a6f52e4, type: 3}
+    showcaseName: "Lock\u5408\u308F\u305B\u306A\u3044"
     names:
-    - Shoi
-    - aaaa
-    - ggggg
-    - ddd
+    - "\u30E0\u30E9\u30BB"
+    - "\u30EF\u30F3\u30C9\u30EA\u30F3\u30AF\u5225"
+    - "\u30C7\u30ED\u30EA\u30A2\u30F3"
+    - "\u30CD\u30D0\u30FC\u30A4\u30CA\u30D5"
+    - "\u30ED\u30EA\u30DD\u30C3\u30D7"
+    - "\u30D6\u30AF\u30DE"
+    - "\u30DC\u30B8\u30E7\u30EC\u30FC\u30CC\u30FC\u30DC\u30FC"
+    - "\u53CC\u5B50\u8449\u985E"
+    - "\u304F\u3089\u3061\u3083\u3093"
+    - "\u590F\u306E\u9663"
+    - "\u738B\u6797"
+    - "\u518D\u914D\u9054"
+    - "\u63DA\u3052\u3082\u307F\u3058"
+    - "\u30D2\u30C3\u30C8\u30A8\u30F3\u30C9\u30E9\u30F3"
+    - "\u30DB\u30FC\u30EB\u30A4\u30F3\u30EF\u30F3"
     genre: 4

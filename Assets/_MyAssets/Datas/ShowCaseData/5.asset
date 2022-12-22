@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e9d28721b08674ba65139985104126, type: 3}
+  m_Name: 5
+  m_EditorClassIdentifier: 
+  showCaseData:
+    artistPicture: {fileID: 21300000, guid: cd7586d3029c07c4b8a31ed7a0c7ee59, type: 3}
+    showcaseName: "\u30D6\u30E9\u30B6\u30FC\u30BA"
+    names:
+    - "\u305F\u304F\u307F"
+    - bigboss
+    genre: 2

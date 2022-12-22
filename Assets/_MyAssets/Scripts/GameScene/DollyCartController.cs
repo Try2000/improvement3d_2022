@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DollyCartController : MonoBehaviour
+public class DollyCartController : SingletonMonoBehaviour<DollyCartController>
 {
     [SerializeField] CinemachineDollyCart cinemachineDollyCart;
     [SerializeField] Ease easingType = Ease.InQuad;
@@ -16,5 +16,11 @@ public class DollyCartController : MonoBehaviour
     public void ChangeSpeedWithEasing(float toSpeed)
     {
         DOTween.To(() => cinemachineDollyCart.m_Speed, (x) => cinemachineDollyCart.m_Speed = x, toSpeed, duration).SetEase(easingType);
+    }
+    public void ChangePath(CinemachineSmoothPath cinemachineSmoothPath)
+    {
+        Vector3 pos = cinemachineDollyCart.transform.position;
+        cinemachineDollyCart.m_Path = cinemachineSmoothPath;
+
     }
 }

@@ -58,7 +58,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -240343519701324132, guid: 9fe00113059e8b645b6d7ea5c41fe3b5, type: 2}
+  - {fileID: 1526137810912483567, guid: 712e7b6fb8825b54389192823d7cd06a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,12 +100,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'AIUEO
-
-'
+  m_text: "\u3042\u3044\u3046\u3048\u304A"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9fe00113059e8b645b6d7ea5c41fe3b5, type: 2}
-  m_sharedMaterial: {fileID: -240343519701324132, guid: 9fe00113059e8b645b6d7ea5c41fe3b5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 712e7b6fb8825b54389192823d7cd06a, type: 2}
+  m_sharedMaterial: {fileID: 1526137810912483567, guid: 712e7b6fb8825b54389192823d7cd06a, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

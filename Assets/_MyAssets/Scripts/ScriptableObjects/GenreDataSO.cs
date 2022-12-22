@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public enum Genre
 {
-    Style,
+    FreeStyle,
     JHH,
     House,
     SHH,

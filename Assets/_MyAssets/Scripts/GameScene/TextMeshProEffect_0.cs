@@ -12,7 +12,7 @@ public class TextMeshProEffect_0 : MonoBehaviour
     private void Awake()
     {
         tmpro = GetComponent<TextMeshPro>();
-        
+        StartGlich();
     }
     public void StartGlich()
     {

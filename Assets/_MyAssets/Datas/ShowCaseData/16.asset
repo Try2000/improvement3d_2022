@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2e9d28721b08674ba65139985104126, type: 3}
+  m_Name: 16
+  m_EditorClassIdentifier: 
+  showCaseData:
+    artistPicture: {fileID: 21300000, guid: 8fc0df16a5217294db73028ba314404e, type: 3}
+    showcaseName: Copenhagen
+    names:
+    - "\u30C0\u30C3\u30C4"
+    - "\u30DE\u30AB\u30ED\u30F3"
+    - "\u3075\u308F\u3075\u308F"
+    - "\u3059\u3059\u304D\u306E\u304D"
+    - "\u3089\u30FC\u3086\u30FC"
+    - "\u3067\u3093\u304C\u304F"
+    - "\u30D1\u30FC\u30AF\u30B9"
+    genre: 3
