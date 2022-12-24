@@ -48,7 +48,6 @@ public class VirtualCameraController : SingletonMonoBehaviour<VirtualCameraContr
     {
         return (mainIndex < virtualCameraDatas.Length - 1) ? virtualCameraDatas[mainIndex].cinemachineVirtual : virtualCameraDatas[0].cinemachineVirtual;
     }
-
     Stack<Transform> followTransformStack;
 
     public void TmpReleaseFollow()

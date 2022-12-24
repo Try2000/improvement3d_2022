@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,6 +11,7 @@ public class PathLoopMoveManager : MonoBehaviour
     private void Awake()
     {
         StartMove();
+        if (GenreThemeColorSetter.Instance != null) GenreThemeColorSetter.Instance.onColorChanged += ChangeColor;
     }
     public void StartMove()
     {
@@ -26,5 +28,15 @@ public class PathLoopMoveManager : MonoBehaviour
             }
             pathLoopMovers[i].StartPathLoop(path.ToArray(), moveData);
         }
+    }
+    public void ChangeColor(Color color)
+    {
+        Array.ForEach(pathLoopMovers, pathLoopMover =>
+        {
+            if (pathLoopMover.MovingTransform.TryGetComponent<Renderer>(out Renderer renderer))
+            {
+                renderer.material.SetColor(0, color);
+            }
+        });
     }
 }

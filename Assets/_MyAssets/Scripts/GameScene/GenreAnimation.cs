@@ -33,6 +33,8 @@ public class GenreAnimation : MonoBehaviour
             if(genreTextData.genre == showCaseDataSO.ShowCaseData.genre)
             {
                 Vector3 diff = basePosTransform.position - genreTextData.genreParent.transform.position;
+                var camera =  VirtualCameraController.Instance.GetMainVCamera();
+                camera.transform.position -= new Vector3(0, 0, diff.z);
                 Array.ForEach(paths, path =>
                 {
                     path.position -= new Vector3(0,0,diff.z);
@@ -43,13 +45,13 @@ public class GenreAnimation : MonoBehaviour
         for(int i = 0; i < textMeshPros.Length; i++)
         {
             float duration = baseDuration + UnityEngine.Random.Range(randomMin, randomMax);
-            textMeshPros[i].DOText(showCaseDataSO.ShowCaseData.names[UnityEngine.Random.Range(0, showCaseDataSO.ShowCaseData.names.Length - 1)], duration, false, ScrambleMode.Uppercase).SetEase(Ease.Linear);
+            textMeshPros[i].DOText(showCaseDataSO.ShowCaseData.names[UnityEngine.Random.Range(0, showCaseDataSO.ShowCaseData.names.Length )], duration, false, ScrambleMode.Uppercase).SetEase(Ease.Linear);
             UnityEngine.Random.InitState(i);
         }
         DOVirtual.DelayedCall(largeTextDelay, () =>
         {
             ChangeTexts();
-        });
+        },false);
     }
 
     public void ChangeTexts()
@@ -58,5 +60,13 @@ public class GenreAnimation : MonoBehaviour
         if (genreTextData == null) return;
         genreTextData.genreParent.SetActive(false);
         genreTextData.largeTextObject.SetActive(true);
+    }
+    public ShowCaseData GetShowCaseData()
+    {
+        return showCaseDataSO.ShowCaseData;
+    }
+    public GenreTextData GetGenreData()
+    {
+        return Array.Find(genreTextDatas, genreTextData => genreTextData.genre == showCaseDataSO.ShowCaseData.genre);
     }
 }

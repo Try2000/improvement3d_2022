@@ -22,7 +22,7 @@ public class TextMovingEffectManager : MonoBehaviour
                 oneDirectionMover.gameObject.SetActive(true);
                 oneDirectionMover.ChangeState(MoveState.Moving);
             });
-        });
+        },false);
         
     }
 }

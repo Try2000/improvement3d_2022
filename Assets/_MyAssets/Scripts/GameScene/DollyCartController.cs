@@ -23,4 +23,5 @@ public class DollyCartController : SingletonMonoBehaviour<DollyCartController>
         cinemachineDollyCart.m_Path = cinemachineSmoothPath;
 
     }
+
 }

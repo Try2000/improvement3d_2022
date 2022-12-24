@@ -8,10 +8,14 @@ public class PathLoopMover_1 : MonoBehaviour
     [SerializeField] Transform movingTransform;
     Transform _transform;
 
-
+    public Transform MovingTransform
+    {
+        get { return movingTransform; }
+    }
     private void Awake()
     {
         _transform = transform;
+       
     }
 
     public void StartPathLoop(Transform[] pathTransforms,MoveData moveData)

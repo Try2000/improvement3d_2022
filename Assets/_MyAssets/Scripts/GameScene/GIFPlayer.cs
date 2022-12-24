@@ -33,7 +33,7 @@ public class GIFPlayer : MonoBehaviour,IFixedUpdater
             while (img != null)
             {
                 Texture2D tex = img.CreateTexture();
-                tex.Compress(false);
+                if(tex.width % 4 == 0) tex.Compress(false);
                 mFrames.Add(tex);
 
                 img = decoder.NextImage();
